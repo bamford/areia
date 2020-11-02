@@ -2,25 +2,15 @@ __title__ = 'AREIA: Artificial Redshift Effects for IA'
 __author__ = 'Leonardo Ferreira & Clar-Brid Tohill'
 __version__ = '0.0.1'
 
-import sys
-import argparse
 import numpy as np
-import glob
-
 
 from astropy.io import fits
 from astropy.cosmology import FlatLambdaCDM  
 from astropy.convolution import convolve
-from astropy import constants as const
-from astropy import units as u
-
-from photutils import detect_sources, detect_threshold
 
 from galclean import central_segmentation_map, measure_background
 
 from scipy.ndimage import zoom
-
-from matplotlib import pyplot as plt
 
 
 class Config(object):
